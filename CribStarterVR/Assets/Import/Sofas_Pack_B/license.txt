@@ -1,0 +1,8 @@
+Model Information:
+* title:	Sofas Pack B
+* source:	https://sketchfab.com/3d-models/sofas-pack-b-3fb73fd7fe87467bbf7425abe76990f3
+* author:	Blitzwood (https://sketchfab.com/Blitzwood)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
