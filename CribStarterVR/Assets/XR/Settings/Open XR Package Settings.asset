@@ -303,7 +303,9 @@ MonoBehaviour:
   features:
   - {fileID: 5253253168116045135}
   - {fileID: -8514067576074423266}
+  - {fileID: 5224921032836231757}
   - {fileID: -6727173562423224151}
+  - {fileID: 8499603454166358055}
   - {fileID: 1257529226440781984}
   - {fileID: -8402583570000921499}
   - {fileID: 4401874036717288993}
@@ -407,11 +409,11 @@ MonoBehaviour:
   m_Name: InterceptCreateSessionFeature Android
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
-  openxrExtensionStrings: 
-  company: 
+  nameUi: 'Sample: Intercept Create Session'
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.example.intercept
+  openxrExtensionStrings: XR_test
+  company: Unity
   priority: 0
   required: 0
   message: Hello from C#!
@@ -509,11 +511,11 @@ MonoBehaviour:
   m_Name: MeshingTeapotFeature Android
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
+  nameUi: 'Sample: Meshing Teapot'
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.example.meshing
   openxrExtensionStrings: 
-  company: 
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &8625228851366731142
