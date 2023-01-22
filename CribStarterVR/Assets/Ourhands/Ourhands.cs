@@ -9,14 +9,14 @@ public class Ourhands : MonoBehaviour
 
     // public values to set in Unity, private used only in script
     public GameObject ourHandsPrefab;
-    public InputDeviceCharacteristics ourControllerCharecteristics; 
+    public InputDeviceCharacteristics ourControllerCharecteristics;
 
     private InputDevice ourDevice;
 
     // Start is called before the first frame update
     void Start()
     {
-        InitializeOurHands(); 
+        InitializeOurHands();
     }
     void InitializeOurHands()
     {
@@ -32,11 +32,36 @@ public class Ourhands : MonoBehaviour
         }
     }
 
-
-
     // Update is called once per frame
     void Update()
     {
-        
+        // Change Animate poistion or re-initialize
+        if (ourDevice.isValid)
+        {
+            UpdateOurHands();
+        }
+        else
+        {
+            InitializeOurHands();
+        }
+    }
+    void UpdateOurHands()
+    {
+        if (ourDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
+        {
+            Debug.Log("Trigger Value =" + triggerValue);
+        }
+        else
+        {
+            Debug.Log("Trigger not Active");
+        }
+        if (ourDevice.TryGetFeatureValue(CommonUsages.grip, out float gripvalue))
+        {
+            Debug.Log("Grip Value = + gripValue");
+        }
+        else
+        {
+            Debug.Log("Grip not Active");
+        }
     }
 }
