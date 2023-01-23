@@ -12,6 +12,7 @@ public class Ourhands : MonoBehaviour
     public InputDeviceCharacteristics ourControllerCharecteristics;
 
     private InputDevice ourDevice;
+    private Animator ourHandAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class Ourhands : MonoBehaviour
         {
             ourDevice = devices[0];
             GameObject newHand = Instantiate(ourHandsPrefab, transform);
+            ourHandAnimator = newHand.GetComponent<Animator>();
         }
     }
 
@@ -49,19 +51,20 @@ public class Ourhands : MonoBehaviour
     {
         if (ourDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
         {
-            Debug.Log("Trigger Value =" + triggerValue);
+            ourHandAnimator.SetFloat("Trigger", triggerValue);
         }
         else
         {
-            Debug.Log("Trigger not Active");
+            ourHandAnimator.SetFloat("Trigger", 0);
         }
-        if (ourDevice.TryGetFeatureValue(CommonUsages.grip, out float gripvalue))
+
+        if (ourDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
         {
-            Debug.Log("Grip Value = + gripValue");
+            ourHandAnimator.SetFloat("Grip", gripValue);
         }
         else
         {
-            Debug.Log("Grip not Active");
+            ourHandAnimator.SetFloat("Grip", 0);
         }
     }
 }
